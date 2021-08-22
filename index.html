@@ -1,0 +1,296 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photo</title>
+    </head>
+    <body style="background-color: burlywood;">
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/maps.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+<script>
+
+ am4core.useTheme(am4themes_animated);
+ 
+ 
+ var chart = am4core.create("chartdiv", am4maps.MapChart);
+
+ chart.geodata = am4geodata_worldLow;
+ 
+
+ chart.projection = new am4maps.projections.Orthographic();
+ chart.panBehavior = "rotateLongLat";
+ chart.deltaLatitude = -20;
+ chart.padding(20,20,20,20);
+ 
+ var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+
+ polygonSeries.useGeodata = true;
+
+
+ var polygonTemplate = polygonSeries.mapPolygons.template;
+ polygonTemplate.tooltipText = "{name}";
+ polygonTemplate.fill = am4core.color("#FF6633");
+ polygonTemplate.stroke = am4core.color("#000033");
+ polygonTemplate.strokeWidth = 0.5;
+ polygonTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
+ polygonTemplate.url = "https://www.datadrum.com/main.php?package={id}";
+ polygonTemplate.urlTarget = "_blank";
+ 
+ var graticuleSeries = chart.series.push(new am4maps.GraticuleSeries());
+ graticuleSeries.mapLines.template.line.stroke = am4core.color("#ffffff");
+ graticuleSeries.mapLines.template.line.strokeOpacity = 0.08;
+ graticuleSeries.fitExtent = false;
+ 
+ 
+ chart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 0.1;
+ chart.backgroundSeries.mapPolygons.template.polygon.fill = am4core.color("#ffffff");
+
+ var hs = polygonTemplate.states.create("hover");
+ hs.properties.fill = chart.colors.getIndex(0).brighten(-0.5);
+ 
+ let animation;
+ setTimeout(function(){
+   animation = chart.animate({property:"deltaLongitude", to:100000}, 20000000);
+ }, 3000)
+ 
+ chart.seriesContainer.events.on("down", function(){
+ 
+ })
+
+ </script>
+
+
+
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#chartdiv {
+  width: 100%;
+  height:250px;
+max-width:100%;
+  background-color:#000033;
+}
+
+nav
+{
+    line-height: 2;
+}
+    
+
+
+    li{
+        display:inline;
+        list-style:none;
+        padding: 1px 10px;
+        
+    }
+
+
+
+a{
+    text-decoration: none;
+    color: red;
+}
+
+a:hover{
+    color: floralwhite;
+}
+div.first{
+background-image: url(i.jpg);
+}
+div.second
+{
+  background-color: rgb(8, 230, 75);
+  background-size:  cover;
+}
+
+.CopyrightText{
+            width:1050px;
+            background: #181818;
+            padding: 8px 100px;
+            text-align: center;
+            color: #999;
+        } 
+</style>
+
+
+  <nav style="background-color:darkslategrey;">         
+ <li><a class="hover"href="https://www.nrdc.org/stories/air-pollution-everything-you-need-know"><b> Air Pollution</b></a></td></li>
+   <li> <a href="https://www.britannica.com/science/land-pollution"><b>Land Pollution</b></a></td></li>
+    <li><a href="https://www.environmentalpollutioncenters.org/soil/"><b>Soil Pollution</b></a></li>
+    <li><a href="https://www.nrdc.org/stories/water-pollution-everything-you-need-know"><b>Water Pollution</b></a></li>
+      <li><a href="https://www.nrdc.org/onearth/can-noise-pollution-affect-way-mongooses-sniff-out-their-enemies"><b>Noise Pollution</b></a></li>
+         <li><a href="https://www.ecowatch.com/light-pollution-dangers-2649940234.html"><b>Light Pollution</b></a></li>
+         <li><a href="https://www.nrdc.org/stories/industrial-agricultural-pollution-101"><b>Agricultural Pollution</b></a></li>
+</nav>
+
+<br>
+<nav style="background-color:rgb(39, 177, 165);">
+    <li><a class="1"href="Contact us.html"><b>Contact us</b></a></td></li>
+   <li> <a class="2" href="facebook.com"><b>About</b></a></td></li>
+    <li><a class="3"href="https://pixabay.com/videos/search/pollution/"><b>videos</b></a></li>
+    <li><a class="4"href="https://unsplash.com/s/photos/air-pollution"><b>photos</b></a></li>
+</nav>
+          
+     <br>
+      
+     <div id="chartdiv"></div>
+
+<br>
+     <div class="first">
+     <br>
+ <marquee scrollamount="3" loop="infinite"behavior="alternate">
+<img src="1.jfif" height="100px"width="150px">
+<img src="2.jpg"height="100px"width="150px">
+<img src="3.jpg"height="100px"width="150px">
+<img src="4.jpg"height="100px"width="150px">
+<img src="5.jpg"height="100px"width="150px">
+<img src="6.jpeg"height="100px"width="150px">
+
+
+     </marquee>  
+  
+     <br>
+<br>
+  <center>
+   
+<table  border="4">
+               <caption><b>SAVE INVIRONMENT</b></caption>
+
+               <td width="600" height="80"><font style="color: rgb(43, 3, 3); font-weight:bold;">Many of the earth's resources are especially vulnerable because they are influenced by human impacts
+  across different countries. As a result of this, many attempts are made by countries to develop agreements that are signed by        
+  multiple governments to prevent damage or manage the impacts of human activity on natural resources. This can include agreements that impact factors such as climate, oceans,
+  rivers and air pollution. These international environmental agreements are sometimes legally binding documents that have legal implications when they are not followed and, at 
+  other times, are more agreements in principle or are for use as codes of conduct. These agreements have a long history 
+  with some multinational agreements being in place from as early as 1910 in Europe, America and Africa.</font></td>
+
+
+ <td>
+  <img src="ff.jpg" usemap="#image_map" height="250px"width="400px">
+  <map name="image_map">
+    <area alt="who" title="who" href="https://www.who.int/health-topics/air-pollution#tab=tab_1" coords="-3,-3,979,347" shape="rect">
+    <area alt="epa.gov" title="epa.gov" href="https://www.epa.gov/pmcourse/what-particle-pollution" coords="0,347,515,591" shape="rect">
+    <area alt="california" title="california" href="https://ww2.arb.ca.gov/resources/inhalable-particulate-matter-and-health" coords="517,348,969,591" shape="rect">
+  </map>
+
+</td>
+
+</center>
+    
+</table>
+
+<br>
+<br>
+</div>
+
+<div class="second">
+<h1 style="text-align: left;">Four major types of pollution :</h1>
+<h3>
+<ol>
+<li  align="left" style="display:list-item;
+        list-style:square;">Air Pollution</li>
+<li align="left" style="display:list-item;
+                  list-style: square;">Water Pollution</li>
+<li align="left"style="display:list-item;
+                list-style: square;">Land Pollution</li>
+<li align="left"style="display:list-item;
+list-style: square;">Noise Pollution</li>
+</ol>
+</h3>
+<br>
+<br>
+
+<font align="left">
+<h1>Air Pollution</h1>
+<p align="left"> 
+Air pollution refers to the release of pollutants into the air—pollutants which are detrimental to human health and the planet as 
+a whole. According to the World Health Organization (WHO), each year air pollution is responsible for nearlyseven million deaths 
+around the globe. Nine out of ten human beings currently breathe air that exceeds the WHO’s guideline limits for pollutants, with 
+those living in low- and middle-income countries suffering the most. In the United States, the Clean Air Act,established in 1970, 
+authorizes the U.S. Environmental Protection Agency (EPA) to safeguard public health by regulating the emissionsof these harmful air
+pollutants. </p>
+<p>
+“Most air pollution comes from energy use and production,” says John Walke, director of the Clean Air Project, part of the Climate and
+Clean Energy program at NRDC. “Burning fossil fuels releases gases and chemicals into the air.” And in an especially destructive feedback 
+loop, air pollution not only contributes to climate change but is also exacerbated by it. “Air pollution in the form of carbon dioxide and 
+methane raises the earth’s temperature,” Walke says. “Another type of air pollution, smog, is then worsened by that increased heat, forming 
+when the weather is warmer and there’s more ultraviolet radiation.” Climate change also increases the production of allergenic air pollutants,
+including mold (thanks to damp conditions caused by extreme weather and increased flooding) and pollen (due to a longer pollen season).
+</p>
+<h1>Water Pollution</h1>
+<p align="left"> Water pollution occurs when harmful substances—often chemicals or microorganisms—contaminate a stream, river, lake, ocean,
+aquifer, or other body of water, degrading water quality and rendering it toxic to humans or the environment .
+</p>
+<p>
+Water is uniquely vulnerable to pollution. Known as a “universal solvent,” water is able to dissolve more substances than any other liquid
+on earth. It’s the reason we have Kool-Aid and brilliant blue waterfalls. It’s also why water is so easily polluted. Toxic substances from
+farms, towns, and factories readily dissolve into and mix with it, causing water pollution.
+</p>
+
+<li style="display:list-item;">
+<h4>Categories of Water Pollution</h4></li>
+<li style="display:list-item;
+            list-style: circle ;">Groundwater</li>
+<li style="display:list-item;
+            list-style: circle ">Surface water</li>
+<li style="display:list-item;
+            list-style: circle "> Ocean water</li>
+<li style="display:list-item;
+              list-style: circle ">Point source</li>
+   <li style="display:list-item;
+   list-style: circle ">Nonpoint source</li>
+   <li style="display:list-item;
+   list-style: circle ">Transboundary</li>
+   <li style="display:list-item;
+   list-style: circle ">Agricultural</li>
+   <li style="display:list-item;
+   list-style: circle ">Nonpoint source</li>
+   
+              
+              
+<h1>Land Pollution</h1>
+
+<p align="left"> 
+Land pollution, the deposition of solid or liquid waste materials on land or underground in a manner that can contaminate the soil and 
+groundwater, threaten public health, and cause unsightly conditions and nuisances.
+
+The waste materials that cause land pollution are broadly classified as municipal solid waste (MSW, also called municipal refuse), 
+construction and demolition (C&D) waste or debris, and hazardous waste. MSW includes nonhazardous garbage, rubbish, and trash from homes,
+institutions (e.g., schools), commercial establishments, and industrial facilities. Garbage contains moist and decomposable (biodegra-
+dable) food wastes (e.g., meat and vegetable scraps); rubbish comprises mostly dry materials such as paper, glass, textiles, and plastic-
+
+objects; and trash includes bulky waste materials and objects that are not collected routinely for disposal (e.g., discarded mattresses,
+appliances, pieces of furniture). C&D waste (or debris) includes wood and metal objects, wallboard, concrete rubble, asphalt, and other
+inert materials produced when structures are built, renovated, or demolished. Hazardous wastes include harmful and dangerous substances
+generated primarily as liquids but also as solids, sludges, or gases by various chemical manufacturing companies, petroleum refineries,
+paper mills, smelters, machine shops, dry cleaners, automobile repair shops, and many other industries or commercial facilities. In 
+addition to improper disposal of MSW, C&D waste, and hazardous waste, contaminated effluent from subsurface sewage disposal (e.g., from 
+septic tanks) can also be a cause of land pollution.
+</p>
+<h1>Noise Pollution</h1>
+<p align="left">
+Noise pollution or noise disturbance is the excessive noise that may harm the activity or balance of human or animal life. The source of
+most outdoor noise worldwide is mainly caused by machines and transportation systems, motor vehicles, aircraft, and trains. Noise pollut-
+ion affects both health and behavior.
+
+Noise pollution takes place when there is either excessive amount of noise or an unpleasant sound that causes temporary disruption in the
+balance. This definition is usually applicable to sounds or noises that are unnatural in either their volume or their production. Our 
+environment is such that it has become difficult to escape noise. Even electrical appliances at home have a constant hum or beeping sound. 
+By and large, lack of urban planning increases the exposure to unwanted sounds.                 
+</p></font>
+<br>
+</div>
+<br>
+<div class="CopyrightText">
+  <p>Copyright © 2021 Web Development Tutorial. All Rights Reserved.</p>
+</div> 
+</body>
+</head>
+</html>
