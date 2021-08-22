@@ -74,11 +74,13 @@ body {
 #chartdiv {
   width: 100%;
   height:250px;
-max-width:100%;
+  max-width:100%;
   background-color:#000033;
 }
-
-nav
+nav.line2{
+  line-height: 3;
+}
+nav.line1
 {
     line-height: 2;
 }
@@ -104,35 +106,49 @@ a:hover{
 }
 div.first{
 background-image: url(i.jpg);
+background-repeat: no-repeat;
+background-size: cover;
 }
 div.second
 {
   background-color: rgb(8, 230, 75);
   background-size:  cover;
 }
-
+/* 
 .CopyrightText{
             width:1050px;
             background: #181818;
-            padding: 8px 100px;
+            padding: 8px 40px;
             text-align: center;
             color: #999;
-        } 
+        }  */
+
+table{
+  width: 80%;
+  height:250px;
+  max-width:80%;
+  
+}
+
+  
+
+
+
 </style>
 
 
-  <nav style="background-color:darkslategrey;">         
- <li><a class="hover"href="https://www.nrdc.org/stories/air-pollution-everything-you-need-know"><b> Air Pollution</b></a></td></li>
+  <nav class ="line2"style="background-color:darkslategrey;">         
+ <li><a class="hover"href="https://www.nrdc.org/stories/air-pollution-everything-you-need-know"><b>Air Pollution</b></a></td></li>
    <li> <a href="https://www.britannica.com/science/land-pollution"><b>Land Pollution</b></a></td></li>
-    <li><a href="https://www.environmentalpollutioncenters.org/soil/"><b>Soil Pollution</b></a></li>
-    <li><a href="https://www.nrdc.org/stories/water-pollution-everything-you-need-know"><b>Water Pollution</b></a></li>
-      <li><a href="https://www.nrdc.org/onearth/can-noise-pollution-affect-way-mongooses-sniff-out-their-enemies"><b>Noise Pollution</b></a></li>
-         <li><a href="https://www.ecowatch.com/light-pollution-dangers-2649940234.html"><b>Light Pollution</b></a></li>
-         <li><a href="https://www.nrdc.org/stories/industrial-agricultural-pollution-101"><b>Agricultural Pollution</b></a></li>
+   <li><a href="https://www.environmentalpollutioncenters.org/soil/"><b>Soil Pollution</b></a></li>
+   <li><a href="https://www.nrdc.org/stories/water-pollution-everything-you-need-know"><b>Water Pollution</b></a></li>
+   <li><a href="https://www.nrdc.org/onearth/can-noise-pollution-affect-way-mongooses-sniff-out-their-enemies"><b>Noise Pollution</b></a></li>
+   <li><a href="https://www.ecowatch.com/light-pollution-dangers-2649940234.html"><b>Light Pollution</b></a></li>
+   <li><a href="https://www.nrdc.org/stories/industrial-agricultural-pollution-101"><b>Agricultural Pollution</b></a></li>
 </nav>
 
 <br>
-<nav style="background-color:rgb(39, 177, 165);">
+<nav class="line1" style="background-color:rgb(39, 177, 165);">
     <li><a class="1"href="Contact us.html"><b>Contact us</b></a></td></li>
    <li> <a class="2" href="facebook.com"><b>About</b></a></td></li>
     <li><a class="3"href="https://pixabay.com/videos/search/pollution/"><b>videos</b></a></li>
@@ -162,9 +178,9 @@ div.second
   <center>
    
 <table  border="4">
-               <caption><b>SAVE INVIRONMENT</b></caption>
+               <caption><b>SAVE ENVIRONMENT</b></caption>
 
-               <td width="600" height="80"><font style="color: rgb(43, 3, 3); font-weight:bold;">Many of the earth's resources are especially vulnerable because they are influenced by human impacts
+               <td height="80"><font style="color: rgb(43, 3, 3); font-weight:bold;">Many of the earth's resources are especially vulnerable because they are influenced by human impacts
   across different countries. As a result of this, many attempts are made by countries to develop agreements that are signed by        
   multiple governments to prevent damage or manage the impacts of human activity on natural resources. This can include agreements that impact factors such as climate, oceans,
   rivers and air pollution. These international environmental agreements are sometimes legally binding documents that have legal implications when they are not followed and, at 
@@ -172,8 +188,8 @@ div.second
   with some multinational agreements being in place from as early as 1910 in Europe, America and Africa.</font></td>
 
 
- <td>
-  <img src="ff.jpg" usemap="#image_map" height="250px"width="400px">
+ <td height="200">
+  <img class =" photo"src="ff.jpg" usemap="#image_map" height="150"width=200">
   <map name="image_map">
     <area alt="who" title="who" href="https://www.who.int/health-topics/air-pollution#tab=tab_1" coords="-3,-3,979,347" shape="rect">
     <area alt="epa.gov" title="epa.gov" href="https://www.epa.gov/pmcourse/what-particle-pollution" coords="0,347,515,591" shape="rect">
@@ -288,9 +304,9 @@ By and large, lack of urban planning increases the exposure to unwanted sounds.
 <br>
 </div>
 <br>
-<div class="CopyrightText">
+<!-- <div class="CopyrightText">
   <p>Copyright © 2021 Web Development Tutorial. All Rights Reserved.</p>
-</div> 
+</div>  -->
 </body>
 </head>
 </html>
